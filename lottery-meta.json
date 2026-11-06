@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-06T22:00:00+09:00",
+  "revision": "7109:2026/11/06",
+  "games": {
+    "numbers3": {
+      "enabled": true,
+      "displayName": "ナンバーズ3",
+      "csv": "numbers3.csv",
+      "lastDrawNumber": 7109,
+      "lastDrawDate": "2026/11/06",
+      "recordCount": 7109,
+      "updatedAt": "2026-11-06T22:00:00+09:00",
+      "source": "rakuten"
+    },
+    "numbers4": {
+      "enabled": true,
+      "displayName": "ナンバーズ4",
+      "csv": "numbers4.csv",
+      "lastDrawNumber": 7109,
+      "lastDrawDate": "2026/11/06",
+      "recordCount": 7109,
+      "updatedAt": "2026-11-06T22:00:00+09:00",
+      "source": "rakuten"
+    }
+  }
+}
