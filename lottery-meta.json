@@ -1,26 +1,26 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-16T20:23:18+09:00",
-  "revision": "7115:2026/11/16",
+  "updatedAt": "2026-11-17T20:23:18+09:00",
+  "revision": "7116:2026/11/17",
   "games": {
     "numbers3": {
       "enabled": true,
       "displayName": "ナンバーズ3",
       "csv": "numbers3.csv",
-      "lastDrawNumber": 7115,
-      "lastDrawDate": "2026/11/16",
-      "recordCount": 7115,
-      "updatedAt": "2026-11-16T20:23:18+09:00",
+      "lastDrawNumber": 7116,
+      "lastDrawDate": "2026/11/17",
+      "recordCount": 7116,
+      "updatedAt": "2026-11-17T20:23:18+09:00",
       "source": "rakuten"
     },
     "numbers4": {
       "enabled": true,
       "displayName": "ナンバーズ4",
       "csv": "numbers4.csv",
-      "lastDrawNumber": 7115,
-      "lastDrawDate": "2026/11/16",
-      "recordCount": 7115,
-      "updatedAt": "2026-11-16T20:23:18+09:00",
+      "lastDrawNumber": 7116,
+      "lastDrawDate": "2026/11/17",
+      "recordCount": 7116,
+      "updatedAt": "2026-11-17T20:23:18+09:00",
       "source": "rakuten"
     }
   }
