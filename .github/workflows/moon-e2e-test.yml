@@ -13,10 +13,11 @@ jobs:
       - name: Request a private run for the current public snapshot
         env:
           TOKEN: ${{ secrets.MOON_PRIVATE_DISPATCH_TOKEN }}
-          SOURCE_SHA: ${{ github.sha }}
         run: |
           set -euo pipefail
           if [ -z "$TOKEN" ]; then echo 'Token is missing'; exit 1; fi
+          SOURCE_SHA=$(git ls-remote https://github.com/yumemitai-taicho/artemis-data.git refs/heads/main | cut -f1)
+          if ! [[ "$SOURCE_SHA" =~ ^[0-9a-f]{40}$ ]]; then echo 'Invalid source SHA'; exit 1; fi
           printf '{"event_type":"artemis_draw_update","client_payload":{"source_sha":"%s"}}' "$SOURCE_SHA" > /tmp/request.json
           code=$(curl --silent --show-error --output /dev/null --write-out '%{http_code}' \
             --retry 2 --retry-all-errors --max-time 30 \
