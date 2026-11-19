@@ -1,0 +1,29 @@
+name: Moon - One-time End-to-End Dispatch Test
+on:
+  push:
+    branches:
+      - moon-auto-prep-20261119
+permissions:
+  contents: read
+jobs:
+  dispatch-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Request a private run for the current public snapshot
+        env:
+          TOKEN: ${{ secrets.MOON_PRIVATE_DISPATCH_TOKEN }}
+          SOURCE_SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          if [ -z "$TOKEN" ]; then echo 'Token is missing'; exit 1; fi
+          printf '{"event_type":"artemis_draw_update","client_payload":{"source_sha":"%s"}}' "$SOURCE_SHA" > /tmp/request.json
+          code=$(curl --silent --show-error --output /dev/null --write-out '%{http_code}' \
+            --retry 2 --retry-all-errors --max-time 30 \
+            -X POST \
+            -H 'Accept: application/vnd.github+json' \
+            -H "Authorization: Bearer ${TOKEN}" \
+            --data-binary @/tmp/request.json \
+            'https://api.github.com/repos/yumemitai-taicho/artemis-moon-calc/dispatches')
+          test "$code" = 204 || { echo "Dispatch failed: HTTP $code"; exit 1; }
+          echo 'Private calculation dispatch accepted.'
