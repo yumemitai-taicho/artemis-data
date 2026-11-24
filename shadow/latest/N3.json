@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "game": 3,
+  "targetRound": 7122,
+  "lastDraw": 7121,
+  "sourceHash": "241a4cd671fc86cc7ac657e74598bfd80cdf716f7ded6ad1d089926db86f4983",
+  "engineVersion": "C74-bw070-sum-semantic-v1",
+  "ranking": [
+    [
+      6,
+      2,
+      5,
+      1,
+      0,
+      9,
+      8,
+      7,
+      4,
+      3
+    ],
+    [
+      6,
+      1,
+      3,
+      8,
+      5,
+      0,
+      4,
+      2,
+      9,
+      7
+    ],
+    [
+      5,
+      9,
+      3,
+      6,
+      2,
+      7,
+      1,
+      0,
+      4,
+      8
+    ]
+  ],
+  "metrics": {
+    "all": 57.291666666666664,
+    "byPosition": [
+      68.75,
+      46.875,
+      56.25
+    ],
+    "straight": 25,
+    "box": 62.5
+  }
+}
