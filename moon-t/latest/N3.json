@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "game": "3",
-  "targetRound": 7123,
-  "lastDraw": 7122,
+  "targetRound": 7124,
+  "lastDraw": 7123,
   "firstX": 10,
   "lastX": 60,
-  "generatedAt": "2026-11-25T10:34:27.903Z",
+  "generatedAt": "2026-11-26T10:36:25.475Z",
   "engineVersion": "0.3.7-Dev8",
   "rankingRuleVersion": "LunaTieBreak-v1",
   "tSelectionRuleVersion": "MoonTPoints-v1",
@@ -29,8 +29,8 @@
       "20": 20
     },
     "mini": {
-      "5": 15,
-      "10": 11,
+      "5": 14,
+      "10": 30,
       "15": 22,
       "20": 22
     }
